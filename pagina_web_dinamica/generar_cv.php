@@ -1,8 +1,8 @@
 <?php
-require_once "config.php"; // Incluye el archivo de configuración de la base de datos
+require_once "config.php"; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recopila los datos del formulario
+   
     $nombre = isset($_POST["Nombre"]) ? $_POST["Nombre"] : "";
     $apellido = isset($_POST["Apellido"]) ? $_POST["Apellido"] : "";
     $nacimiento = isset($_POST["Nacimiento"]) ? $_POST["Nacimiento"] : "";
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $habilidades = isset($_POST["habilidades"]) ? implode(", ", $_POST["habilidades"]) : "";
     $perfil = isset($_POST["perfil"]) ? $_POST["perfil"] : "";
 
-    // Inserta los datos en la tabla de la base de datos
+    
     $sql = "INSERT INTO cv (nombre, apellido, nacimiento, ocupacion, celular, email, nacionalidad, nivel_ingles, lenguajes_programacion, aptitudes, habilidades, perfil)
             VALUES ('$nombre', '$apellido', '$nacimiento', '$ocupacion', '$celular', '$email', '$nacionalidad', '$nivel_ingles', '$lenguajes_programacion', '$aptitudes', '$habilidades', '$perfil')";
 
