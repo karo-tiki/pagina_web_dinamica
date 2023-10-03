@@ -9,7 +9,7 @@
 <body>
     <div class="contenedor">
         <?php echo $contenidoCV; ?>
-        <!-- Otras secciones del CV según tu diseño CSS -->
+        
     </div>
 </body>
 </html>
