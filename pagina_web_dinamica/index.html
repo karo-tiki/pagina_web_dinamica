@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie-edge">
+    <title>FORMULARIO A CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body bgcolor=#EBDEF0>
+    <form action="generar_cv.php" method="POST">
+        <h2>Formulario a curriculum vitae</h2>
+         <fieldset>
+        <div class="int-group">
+            <label for="name">Nombre</label>
+            <input type="text" name="Nombre" id="name" placeholder="Nombre" required>
+            <label for="apellido">Apellidos</label>
+            <input type="text" name="Apellido" id="apellido" placeholder="Apellidos" required><br>
+            <label for="nacimiento">Fecha de nacimiento</label>
+            <input type="date" name="Nacimiento" id =nacimiento required><br>
+            <label for="ocupacion">Ocupacion</label>
+            <input type="text" name=" ocupacion" id="ocupacion" placeholder="Ocupacion" required>
+        </fieldset>
+        <fieldset>
+            <h2>Contactos</h2>
+            <label for="phone">Telefono</label>
+            <input type="tel" name="Celular" id="celular" placeholder="telefono" required>
+            <label for="gmail" >Correo electronico</label>
+            <input type="email" name="email" id="email" placeholder="ejemplo@gmail.com" required>
+        </fieldset>
+        <fieldset>
+            <h2>Informacion</h2>
+            <label for="Nacionalidad">Nacionalidad</label>
+            <select name="Nacionalidad" id="nacionalidad" required>
+                  <option value="peru">Perú</option>
+                  <option value="china">China</option>
+                  <option value="japon">Japón</option>
+                  <option value="ecuador">Ecuador</option>
+                    <option value="otra">otra</option>
+                </select>
+        </fieldset>
+            
+        <fieldset>
+            <h2>Idiomas</h2>   
+            <label for="nivel_ingles">Nivel de Inglés:</label><br>
+            <input type="radio" name="nivel_ingles" value="basico"> Básico<br>
+            <input type="radio" name="nivel_ingles" value="intermedio"> Intermedio<br>
+            <input type="radio" name="nivel_ingles" value="avanzado"> Avanzado<br>
+            <input type="radio" name="nivel_ingles" value="fluido"> Fluido<br><br>
+        </fieldset>
+        <fieldset>
+            <label for="lenguajes_programacion"><h2>Lenguajes de Programación</h2></label>
+            <select name="lenguajes_programacion[]" id="lenguajes_programacion" multiple="multiple"  >
+                <option value="php">C++</option>
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="sql">SQL</option>
+                <option value="jquery">Jquery</option>
+                <option value=".net">.Net</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label for="aptitudes"><h2>Aptitudes:</h2></label>
+            <input list="browsers" name="aptitudes" >
+            <datalist id="browsers">
+                <option value="Organización.">
+                <option value="Formación continua.">
+                <option value="Liderazgo">
+                <option value="Adaptabilidad">   
+            </datalist>
+        </fieldset>
+<label for="perfil">Perfil</label>
+<textarea name="perfil"></textarea>
+ </fieldset>
+            <input class="btn" type="submit" value="generar curriculum">
+             
+        </div>
+    </form>
+</body>
+</html>
+
+
+
